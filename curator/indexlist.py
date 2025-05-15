@@ -1172,7 +1172,7 @@ class IndexList(object):
                     'Removing from list.'.format(index))
                 self.indices.remove(index)
 
-    def filter_ilm(self, exclude=True):
+    def filter_ilm(self, exclude=False):
         """
         Match indices that have the setting `index.lifecycle.name`
 

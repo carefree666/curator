@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "elasticsearch-curator"
+name = "elasticsearch"
 authors = [{ name="Elastic", email="info@elastic.co" }]
 dynamic = ["version"]
 description = "Tending your Elasticsearch indices and snapshots"

@@ -638,7 +638,7 @@ def chunk_index_list(indices):
     chunks = []
     chunk = ""
     for index in indices:
-        if len(chunk) < 3072:
+        if len(chunk) < 4:
             if not chunk:
                 chunk = index
             else:
@@ -679,6 +679,9 @@ def get_version(client):
     :rtype: tuple
     """
     version = client.info()['version']['number']
+    # add easysearch version support
+    if client.info().get("version",{}).get("distribution",{}) == "easysearch":
+        version = "7.10.2"
     version = version.split('-')[0]
     if len(version.split('.')) > 3:
         version = version.split('.')[:-1]
